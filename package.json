@@ -1,0 +1,15 @@
+{
+  "name": "commandandconquer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cnc-0.8.3.b.js",
+  "scripts": {
+    "start": "browser-sync --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp-inject": "^4.3.1"
+  }
+}
