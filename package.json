@@ -1,0 +1,20 @@
+{
+  "name": "commandandconquer",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://jellehak.github.io/commandandconquer/",
+  "scripts": {
+    "start": "browser-sync --watch",
+    "build":"echo 'No build step yet'",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d .",
+    "inject": "gulp index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gh-pages": "^2.0.1",
+    "gulp-inject": "^4.3.1"
+  }
+}
