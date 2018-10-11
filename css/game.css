@@ -1,0 +1,1110 @@
+.gamecontainer {
+	width: 640px;
+	height: 535px;
+	background: black;
+	text-align: center;
+	margin: 0 auto;
+	border: 1px solid gray;
+}
+
+/* Set C&C cursor */
+.gamecontainer, .gamecontainer input, .gamecontainer select,.gamecontainer label, option {
+	cursor: url(../images/default-cursor.gif),default;
+}
+
+#gameinterfacescreen canvas {
+	position: absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+}
+
+#gameinterfacescreen .messages{
+	background:rgba(0,0,0,0.9);
+	border-radius: 10px;
+	position:absolute;
+	border:0;
+	/*width:540px;*/
+	width:60%;
+	height:89px;
+	bottom:46px;
+	left:50px;
+	display:none;
+	opacity:0.5;
+}
+
+
+#gameinterfacescreen .input-message{
+	/*width:540px;*/
+	width:60%;
+	height:14px;
+	position: absolute;
+	bottom:30px;
+	left:50px;
+	display:none;
+	border:1px solid rgba(50,50,50,0.4);
+}
+.mousecanvas{
+	cursor: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjbQg61aAAAADUlEQVQYV2P4//8/IwAI/QL/+TZZdwAAAABJRU5ErkJggg=='),
+	url(../images/blank.cur),
+	none;
+}
+
+.cutscenevideo {
+	display:none;
+}
+
+.gamelayer {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+/* Loading Screen */
+#loadingscreen {
+	background-color:rgb(0,0,0);
+	background-color:rgba(0,0,0,0.5);
+	z-index: 10000;
+}
+
+#loadingbar {
+	position:relative;
+	top:90%;
+	text-align: center;
+	font-size: 11px;
+	color: gray;
+}
+
+#gameinterfacescreen {
+	background: url(../images/htitle.jpg) no-repeat center;
+	background-size: 100% auto;
+	width: 640px;
+	height: 535px;
+}
+
+
+#menu-container {
+	/*background: rgb(0,0,0);*/
+	/*background: rgba(0,0,0,0.5);*/
+	/*border: 1px dotted red;	*/
+	/*text-align: center;*/
+}
+
+.game-menu {
+	display:none;
+	position: absolute;
+	color:rgb(4,161,46);
+	font-family: Arial, Helvetica, sans-serif;
+	font:13px;
+}
+
+@font-face {
+	font-family:Command;
+	src:url('../images/commandandconquer.ttf');
+}
+
+/* Message Box Menu */
+
+#message-box-container{
+	display:none;
+	z-index: 20;
+}
+#message-box-menu-div {
+	background: url(../images/menu/message-box.jpg) no-repeat center;
+	width:597px;
+	height:152px;
+ }
+
+#message-box-menu-div .message-box-title{
+	text-decoration:underline;
+	position:relative;
+	text-align:center;
+	top:10px;
+}
+
+#message-box-menu-div .message-box-content{
+	top:0px;
+	/*padding:20px;*/
+	margin:30px;
+	line-height: 15px;
+	position:relative;
+	text-align:justify;
+}
+
+.message-box-ok{
+	width:60px;
+	height:18px;
+	border-width:1px;
+	background-image: url(../images/menu/message-box.jpg);
+	background-position: -269px -123px;
+	position:absolute;
+	top:122px;
+	left:268px;
+}
+
+/* Game Type Menu */
+#game-type-menu-div {
+	background: url(../images/menu/game-type-menu.png) no-repeat center;
+	width:307px;
+    height:296px;
+    top:200px;
+    left:200px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#game-type-menu-div .singleplayer-game {
+	width:250px;
+	height:18px;
+	background-image: url(../images/menu/game-type-menu.png);
+	background-position: -28px -80px;
+	position:absolute;
+	top:78px;
+	left:27px;
+	border-width:1px;
+}
+
+#game-type-menu-div .load-game {
+	width:250px;
+	height:18px;
+	background-image: url(../images/menu/game-type-menu.png);
+	background-position: -28px -106px;
+	position:absolute;
+	top:104px;
+	left:27px;
+	border-width:1px;
+}
+
+#game-type-menu-div .multiplayer-game {
+	width:250px;
+	height:18px;
+	border-width:1px;
+	background-image: url(../images/menu/game-type-menu.png);
+	background-position: -28px -132px;
+	position:absolute;
+	top:130px;
+	left:27px;
+}
+
+
+#game-type-menu-div .view-game-replay {
+	width:250px;
+	height:18px;
+	border-width:1px;
+	background-image: url(../images/menu/game-type-menu.png);
+	background-position: -28px -158px;
+	position:absolute;
+	top:156px;
+	left:27px;
+}
+
+#game-type-menu-div .header{
+	text-align: center;
+	color:gray;
+	top:20px;
+	width:297px;
+	position: absolute;
+}
+
+#game-type-menu-div .footer{
+	text-align: justify;
+	color:gray;
+	top:180px;
+	width:277px;
+	padding:0 0;
+	position: absolute;
+	font-size:11px;
+	line-height: 13px;
+	margin:0 15px;
+}
+
+/* Select Campaign Menu */
+#select-campaign-menu-div {
+	background-repeat: no-repeat;
+	background-size:100% auto;
+	width: 640px;
+	height: 535px;
+}
+
+.select-transmission {
+	background-image: url(../images/menu/select-transmission-animation.gif);
+	background-position: 0 50%;
+}
+
+.select-transmission-text {
+	position:absolute;
+	top:80%;
+	left:0;
+	width:100%;
+}
+
+.gdi-campaign{
+	width:46%;
+	height:60%;
+	position:absolute;
+	top:20%;
+	left:0;
+}
+
+.nod-campaign{
+	width:50%;
+	height:60%;
+	border-width:0;
+	position:absolute;
+	top:20%;
+	left:50%;
+}
+
+/* Load Mission Menu */
+
+#load-mission-menu-div {
+	background: url(../images/menu/load-mission-menu.png) no-repeat center;
+	width:500px;
+	height:312px;
+}
+#load-mission-menu-div .mission-list {
+	width:472px;
+	height:208px;
+	top:50px;
+	left:14px;
+}
+
+select {
+	outline:none;
+	font:13px Command;
+	padding:2px;
+	background-color:black;
+	border:1px solid gray;
+	position:absolute;
+}
+option {
+	color:rgb(77,176,68);
+}
+select option:selected{
+	color:rgb(108,241,110);
+	background:rgb(35,67,39);
+}
+
+#load-mission-menu-div input {
+	background-image: url(../images/menu/load-mission-menu.png);
+	width:80px;
+	height:18px;
+	top:272px;
+	border-width:1px;
+	position:absolute;
+}
+
+#load-mission-menu-div .load-button {
+	background-position: -157px -273px;
+	left:156px;
+}
+
+#load-mission-menu-div .cancel-button {
+	background-position: -265px -273px;
+	left:264px;
+}
+
+/* Delete Mission Menu */
+
+#delete-mission-menu-div {
+	background: url(../images/menu/delete-mission-menu.png) no-repeat center;
+	width:500px;
+	height:312px;
+}
+#delete-mission-menu-div .mission-list {
+	width:472px;
+	height:208px;
+	top:50px;
+	left:14px;
+}
+
+#delete-mission-menu-div input {
+	background-image: url(../images/menu/delete-mission-menu.png);
+	width:80px;
+	height:18px;
+	top:272px;
+	border-width:1px;
+	position:absolute;
+}
+
+#delete-mission-menu-div .delete-button {
+	background-position: -157px -273px;
+	left:156px;
+}
+
+#delete-mission-menu-div .cancel-button {
+	background-position: -265px -273px;
+	left:264px;
+}
+/* Save Mission Menu */
+
+#save-mission-menu-div {
+	background: url(../images/menu/save-mission-menu.png) no-repeat center;
+	width:500px;
+	height:312px;
+}
+#save-mission-menu-div .mission-list {
+	width:472px;
+	height:178px;
+	top:50px;
+	left:14px;
+}
+
+#save-mission-menu-div .mission-name {
+	position:absolute;
+	width:470px;
+	height:14px;
+	top:234px;
+	left:14px;
+	border:1px solid gray;
+	outline:none;
+	background:black;
+	font:13px Command;
+	color:rgb(77,176,68);
+}
+
+input {
+	outline:none;
+}
+
+input[type="text"]{
+	background:black;
+	border:1px solid gray;
+	padding-left:2px;
+	font:13px Command;
+	color:rgb(77,176,68);
+}
+
+#save-mission-menu-div input[type=button] {
+	background-image: url(../images/menu/save-mission-menu.png);
+	width:80px;
+	height:18px;
+	top:272px;
+	border-width:1px;
+	position:absolute;
+}
+
+
+#save-mission-menu-div .save-button {
+	background-position: -157px -273px;
+	left:156px;
+}
+
+#save-mission-menu-div .cancel-button {
+	background-position: -265px -273px;
+	left:264px;
+}
+
+
+/* Replay Game Menu */
+
+#replay-game-menu-div {
+	background: url(../images/menu/replay-game-menu.png) no-repeat center;
+	width:500px;
+	height:312px;
+}
+#replay-game-menu-div .mission-list {
+	width:472px;
+	height:208px;
+	top:50px;
+	left:14px;
+}
+
+select {
+	outline:none;
+	font:13px Command;
+	padding:2px;
+	background-color:black;
+	border:1px solid gray;
+	position:absolute;
+}
+option {
+	color:rgb(77,176,68);
+}
+select option:selected{
+	color:rgb(108,241,110);
+	background:rgb(35,67,39);
+}
+
+#replay-game-menu-div input {
+	background-image: url(../images/menu/replay-game-menu.png);
+	width:80px;
+	height:18px;
+	top:272px;
+	border-width:1px;
+	position:absolute;
+}
+
+#replay-game-menu-div .save-button {
+	background-position: -405px -274px;
+	left:404px;
+}
+
+#replay-game-menu-div .load-button {
+	background-position: -157px -273px;
+	left:156px;
+}
+
+#replay-game-menu-div .cancel-button {
+	background-position: -265px -273px;
+	left:264px;
+}
+
+
+
+
+
+
+/* Singleplayer Game Options Menu */
+#singleplayer-game-options-menu-div {
+	background: url(../images/menu/game-options-menu.png) no-repeat center;
+	width:448px;
+	height:200px;
+}
+
+#singleplayer-game-options-menu-div input {
+	background-image: url(../images/menu/game-options-menu.png);
+	position:absolute;
+	border-width:1px;
+	width:180px;
+	height:16px;
+}
+
+#singleplayer-game-options-menu-div .load-mission-button {
+	background-position: -135px -43px;
+	top:42px;
+	left:134px;
+}
+#singleplayer-game-options-menu-div .save-mission-button {
+	background-position: -135px -63px;
+	top:62px;
+	left:134px;
+}
+#singleplayer-game-options-menu-div .delete-mission-button {
+	background-position: -135px -83px;
+	top:82px;
+	left:134px;
+}
+#singleplayer-game-options-menu-div .game-controls-button {
+	background-position: -135px -103px;
+	top:102px;
+	left:134px;
+}
+#singleplayer-game-options-menu-div .abort-mission-button {
+	background-position: -135px -123px;
+	top:122px;
+	left:134px;
+}
+#singleplayer-game-options-menu-div .resume-mission-button {
+	background-position: -11px -171px;
+	top:170px;
+	left:10px;
+}
+#singleplayer-game-options-menu-div .restate-mission-button {
+	background-position: -259px -171px;
+	top:170px;
+	left:258px;
+}
+
+
+
+/* Multiplayer Game Options Menu */
+#multiplayer-game-options-menu-div {
+	background: url(../images/menu/multiplayer-game-options-menu.png) no-repeat center;
+	width:448px;
+	height:200px;
+}
+
+#multiplayer-game-options-menu-div input {
+	background-image: url(../images/menu/multiplayer-game-options-menu.png);
+	position:absolute;
+	border-width:1px;
+	width:180px;
+	height:16px;
+}
+
+#multiplayer-game-options-menu-div .sound-controls-button {
+	background-position: -135px -43px;
+	top:42px;
+	left:134px;
+}
+
+#multiplayer-game-options-menu-div .resume-game-button {
+	background-position: -11px -171px;
+	top:170px;
+	left:10px;
+}
+#multiplayer-game-options-menu-div .abort-game-button {
+	background-position: -259px -171px;
+	top:170px;
+	left:258px;
+}
+
+/* Abort Mission Menu */
+#abort-mission-menu-div {
+	background: url(../images/menu/abort-mission-menu.png) no-repeat center;
+	width:297px;
+	height:134px;
+}
+
+#abort-mission-menu-div input {
+	background-image: url(../images/menu/abort-mission-menu.png);
+	position:absolute;
+	border-width:1px;
+
+	height:16px;
+}
+
+#abort-mission-menu-div .yes-button {
+	background-position: -21px -107px;
+	top:106px;
+	left:20px;
+	width:61px;
+}
+#abort-mission-menu-div .restart-button {
+	background-position: -123px -107px;
+	top:106px;
+	left:122px;
+	width:54px;
+}
+#abort-mission-menu-div .no-button {
+	background-position: -218px -107px;
+	top:106px;
+	left:217px;
+	width:61px;
+}
+
+
+/* Restate Mission Menu */
+#restate-mission-menu-div {
+	background: url(../images/menu/restate-mission-menu.png) no-repeat center;
+	width:579px;
+	height:176px;
+}
+
+#restate-mission-menu-div input {
+	background-image: url(../images/menu/restate-mission-menu.png);
+	position:absolute;
+	border-width:1px;
+	height:16px;
+}
+
+#restate-mission-menu-div .video-button {
+	background-position: -21px -149px;
+	top:148px;
+	left:20px;
+	width:61px;
+}
+#restate-mission-menu-div .options-button {
+	background-position: -499px -149px;
+	top:148px;
+	left:498px;
+	width:61px;
+}
+
+#restate-mission-menu-div .mission-briefing{
+	top:10px;
+	margin:40px;
+	line-height: 15px;
+	position:relative;
+	text-align:justify;
+}
+
+
+
+/* Join Network Game Menu */
+#join-network-game-menu-div {
+	background: url(../images/menu/join-network-game-menu.png) no-repeat center;
+	width:573px;
+	height:500px;
+}
+
+#join-network-game-menu-div .player-name{
+	width:140px;
+	height:14px;
+	top:35px;
+	left:265px;
+	position:absolute;
+	border-width:1px;
+
+}
+
+#join-network-game-menu-div .games-list{
+	width:320px;
+	height:110px;
+	top:120px;
+	left:9px;
+}
+
+#join-network-game-menu-div .player-list{
+	width:212px;
+	height:110px;
+	top:120px;
+	left:351px;
+}
+
+.messages{
+	text-align: left;
+	position:absolute;
+	background:black;
+	border:1px solid gray;
+	overflow:hidden;
+	padding:2px;
+}
+.messages p{
+	font-size:12px;
+	line-height: 15px;
+	padding:0;
+	margin:0;
+
+}
+
+#join-network-game-menu-div .messages{
+	width:547px;
+	height:120px;
+	top:288px;
+	left:10px;
+
+}
+
+#join-network-game-menu-div .multiplayer-team{
+	position:absolute;
+	top:57px;
+	left:266px;
+}
+
+#join-network-game-menu-div .multiplayer-team label{
+	margin-right:15px;
+	font:14px Command;
+}
+
+#join-network-game-menu-div .multiplayer-team input[type="radio"]{
+	margin-right:4px;
+}
+
+
+#join-network-game-menu-div .multiplayer-team-color{
+	position:absolute;
+	top:79px;
+	left:261px;
+	padding:2px;
+	width:175px;
+}
+
+#join-network-game-menu-div .multiplayer-team-color span{
+	padding:2px;
+	border:1px solid darkgray;
+	margin:1px;
+}
+
+#join-network-game-menu-div .multiplayer-team-color input[type="radio"]{
+	margin:0;
+	padding:0;
+}
+
+#join-network-game-menu-div input[type="button"] {
+	background-image: url(../images/menu/join-network-game-menu.png);
+	position:absolute;
+	border-width:1px;
+
+	height:18px;
+}
+
+#join-network-game-menu-div input[type="button"]:disabled,#start-network-game-menu-div input[type="button"]:disabled{
+	background:rgba(0,0,0,0.7);
+	border-width:0;
+}
+
+div#join-network-game-menu-div .join-multiplayer-button {
+	background-position: -55px -260px;
+	top:259px;
+	left:54px;
+	width:80px;
+}
+
+div#join-network-game-menu-div .cancel-multiplayer-button {
+	background-position: -247px -260px;
+	top:259px;
+	left:246px;
+	width:80px;
+
+}
+
+div#join-network-game-menu-div .new-multiplayer-button {
+	background-position: -438px -260px;
+	top:259px;
+	left:437px;
+	width:80px;
+}
+
+#join-network-game-menu-div .send-message-button {
+	width:160px;
+	background-position: -207px -449px;
+	top:448px;
+	left:206px;
+
+}
+
+#join-network-game-menu-div .input-message{
+	width:550px;
+	height:14px;
+	top:425px;
+	left:10px;
+
+	position:absolute;
+}
+
+
+
+
+
+/* Joined Network Game Menu */
+#joined-network-game-menu-div {
+	background: url(../images/menu/joined-network-game-menu.png) no-repeat center;
+	width:574px;
+	height:355px;
+}
+
+#joined-network-game-menu-div .player-list{
+	width:212px;
+	height:76px;
+	top:49px;
+	left:10px;
+}
+
+#joined-network-game-menu-div input[type="button"]{
+	height:18px;
+	border-width:1px;
+	background-image: url(../images/menu/joined-network-game-menu.png);
+	position:absolute;
+}
+
+#joined-network-game-menu-div .cancel-multiplayer-button {
+	background-position: -347px -178px;
+	width:90px;
+	top:177px;
+	left:346px;
+}
+
+#joined-network-game-menu-div .send-message-button {
+	width:160px;
+	background-position: -208px -316px;
+	top:315px;
+	left:207px;
+}
+
+#joined-network-game-menu-div .input-message{
+	width:550px;
+	height:14px;
+	top:292px;
+	left:11px;
+	position:absolute;
+}
+
+#joined-network-game-menu-div .messages{
+	width:550px;
+	height:70px;
+	top:206px;
+	left:11px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Start Network Game Menu */
+#start-network-game-menu-div {
+	background: url(../images/menu/start-network-game-menu.png) no-repeat center;
+	width:574px;
+	height:400px;
+}
+
+#start-network-game-menu-div .player-list{
+	width:212px;
+	height:76px;
+	top:49px;
+	left:10px;
+}
+
+#start-network-game-menu-div .scenarios{
+	width:324px;
+	height:76px;
+	top:49px;
+	left:240px;
+}
+
+#start-network-game-menu-div .starting-credits{
+	width:60px;
+	height:14px;
+	top:143px;
+	left:291px;
+	position:absolute;
+}
+
+#start-network-game-menu-div input[type="button"]{
+	height:18px;
+	border-width:1px;
+	background-image: url(../images/menu/start-network-game-menu.png);
+	position:absolute;
+}
+
+#start-network-game-menu-div .start-multiplayer-button {
+	background-position: -139px -222px;
+	width:90px;
+	top:221px;
+	left:138px;
+}
+
+#start-network-game-menu-div .cancel-multiplayer-button {
+	background-position: -347px -222px;
+	width:90px;
+	top:221px;
+	left:346px;
+}
+
+#start-network-game-menu-div .reject-player-button {
+	background-position: -72px -108px;
+	width:90px;
+	top:135px;
+	left:30px;
+}
+
+#start-network-game-menu-div .send-message-button {
+	width:160px;
+	background-position: -208px -360px;
+	top:359px;
+	left:207px;
+}
+
+#start-network-game-menu-div .input-message{
+	width:550px;
+	height:14px;
+	top:337px;
+	left:11px;
+	position:absolute;
+}
+
+#start-network-game-menu-div .messages{
+	width:550px;
+	height:70px;
+	top:250px;
+	left:11px;
+}
+
+
+#start-network-game-menu-div .gamespeed {
+	position:absolute;
+	width:365px;
+	height:10px;
+	top:180px;
+	left:20px;
+}
+#start-network-game-menu-div .noUiSlider {
+	border:	1px solid #CCC;
+	height:	8px;
+	background:	#EEE;
+}
+#start-network-game-menu-div .noUi-midBar {
+	height: 100%;
+	z-index: 0;
+}
+#start-network-game-menu-div .noUi-handle > div {
+	position: absolute;
+	width: 60px;
+	height: 14px;
+	top: 0px;
+	left: 0px;
+	z-index: 5;
+	background: url(../images/menu/slider.png);
+}
+
+
+
+
+
+
+
+
+
+/* Game Controls Menu */
+#game-controls-menu-div {
+	background: url(../images/menu/game-controls-menu.png) no-repeat center;
+	width:464px;
+	height:282px;
+}
+
+#game-controls-menu-div input {
+	background-image: url(../images/menu/game-controls-menu.png);
+	position:absolute;
+	border-width:1px;
+	width:384px;
+	height:16px;
+}
+
+#game-controls-menu-div .visual-controls-button {
+	background-position: -41px -191px;
+	top:190px;
+	left:40px;
+}
+#game-controls-menu-div .sound-controls-button {
+	background-position: -41px -219px;
+	top:218px;
+	left:40px;
+	height:17px;
+}
+#game-controls-menu-div .options-button {
+	background-position: -188px -255px;
+	top:254px;
+	left:187px;
+	width:88px;
+}
+#game-controls-menu-div .gamespeed {
+	position:absolute;
+	width:365px;
+	height:10px;
+	top:83px;
+	left:20px;
+}
+#game-controls-menu-div .scrollspeed {
+	position:absolute;
+	width:365px;
+	height:10px;
+	top:133px;
+	left:20px;
+}
+#game-controls-menu-div .noUiSlider {
+	border:	1px solid #CCC;
+	height:	8px;
+	background:	#EEE;
+}
+#game-controls-menu-div .noUi-midBar {
+	height: 100%;
+	z-index: 0;
+}
+#game-controls-menu-div .noUi-handle > div {
+	position: absolute;
+	width: 60px;
+	height: 14px;
+	top: 0px;
+	left: 0px;
+	z-index: 5;
+	background: url(../images/menu/slider.png);
+}
+
+/* Sound Controls Menu */
+#sound-controls-menu-div {
+	background: url(../images/menu/sound-controls-menu.png) no-repeat center;
+	width:584px;
+	height:292px;
+}
+
+#sound-controls-menu-div .music-tracks-list {
+	width:565px;
+	height:146px;
+	background-color: black;
+	border:1px solid gray;
+	position:absolute;
+	top:108px;
+	left:2px;
+	border-width:1px;
+}
+
+
+#sound-controls-menu-div input {
+	background-image: url(../images/menu/sound-controls-menu.png);
+	position:absolute;
+	border-width:1px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:rgb(77,175,68);
+}
+
+#sound-controls-menu-div .stop-button {
+	background-position: -11px -259px;
+	top:258px;
+	left:10px;
+	width:31px;
+	height:24px;
+	border-width: 1;
+}
+
+#sound-controls-menu-div .play-button {
+	background-position: -47px -259px;
+	top:258px;
+	left:46px;
+	width:31px;
+	height:24px;
+}
+
+#sound-controls-menu-div .shuffle-button {
+	background-position: -183px -261px;
+	top:260px;
+	left:182px;
+	width:49px;
+	height:16px;
+}
+
+#sound-controls-menu-div .repeat-button {
+	background-position: -333px -261px;
+	top:260px;
+	left:332px;
+	width:49px;
+	height:16px;
+}
+
+
+#sound-controls-menu-div .options-button {
+	background-position: -401px -261px;
+	top:260px;
+	left:400px;
+	width:169px;
+	height:16px;
+}
+
+#sound-controls-menu-div .musicvolume {
+	position:absolute;
+	width:200px;
+	height:10px;
+	top:57px;
+	left:295px;
+}
+
+#sound-controls-menu-div .soundvolume {
+	position:absolute;
+	width:200px;
+	height:10px;
+	top:71px;
+	left:295px;
+}
+#sound-controls-menu-div.noUiSlider {
+	border:	1px solid #CCC;
+	height:	8px;
+	background:	#EEE;
+}
+#sound-controls-menu-div .noUi-midBar {
+	height: 100%;
+	z-index: 0;
+}
+#sound-controls-menu-div .noUi-handle > div {
+	position: absolute;
+	width: 15px;
+	height: 11px;
+	top: -1px;
+	left: 0px;
+	z-index: 5;
+	background: url(../images/menu/slider-small.png);
+}
+
+
+
