@@ -2,6 +2,7 @@
   "name": "commandandconquer",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://jellehak.github.io/commandandconquer/",
   "scripts": {
     "start": "browser-sync --watch",
     "build":"echo 'No build step yet'",

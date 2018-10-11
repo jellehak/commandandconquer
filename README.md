@@ -1,5 +1,7 @@
 Rebuild of command and conquer to be able to play on real maps
 
+https://jellehak.github.io/commandandconquer/
+
 # Goals
 - Play it on real maps (Google maps, openstreetmaps)
 - Massive online playing
